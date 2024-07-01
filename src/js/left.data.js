@@ -15,15 +15,17 @@ fetch('db.json')
                 (!colorFilter || product.color === colorFilter) &&
                 (!materialFilter || product.material === materialFilter)) {
                 var col = document.createElement("div");
-                col.className = "prd";
+                col.className = "prd lprd";
                 col.innerHTML = `
+                <a href="prd.html?id=${product.id}" class="prlink">
                     <img src="src/image/${product.primary_photo}" alt="Photo" style="max-width:100%;">
                     <div class="prinfo">
-                        <h2 class="prtitle">${product.name}</h2>
-                        <p class="price">$${product.price}</p>
-                        <a class="quick">QUICK LOOK  <i class="fa-solid fa-heart"></i></a>
-                        <a href="#" class="addtocart" data-id="${product.id}">ADD TO CART</a>
+                        <h2 class="prtitle lprtitle">${product.name}</h2>
+                        <p class="price lprice">$${product.price}</p>
+                        <a class="quick lquick">QUICK LOOK  <i class="fa-solid fa-heart"></i></a>
+                        <a href="#" class="addtocart laddcart" data-id="${product.id}">ADD TO CART</a>
                     </div>
+                </a>
                 `;
                 productList.appendChild(col);
 

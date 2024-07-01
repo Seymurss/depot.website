@@ -25,7 +25,6 @@ fetch('db.json')
       const Dimensions     = document.querySelector(".Dimensions");
       const Color     = document.querySelector(".Color");
       const Material     = document.querySelector(".Material");
-
       const commentimg     = document.querySelector(".commentimg");
       const cname     = document.querySelector(".cname");
       const csurname     = document.querySelector(".csurname");
@@ -125,6 +124,7 @@ fetch('db.json')
       }
 
       generateRatingStars(ratingValue);
+      
     } else {
       console.log('Product Movcud deyil');
     }
